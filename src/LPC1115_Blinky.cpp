@@ -1,20 +1,5 @@
-/*
-===============================================================================
- Name        : main.c
- Author      : $(author)
- Version     :
- Copyright   : $(copyright)
- Description : main definition
-===============================================================================
-*/
 
-#if defined (__USE_LPCOPEN)
-#if defined(NO_BOARD_LIB)
-#include "chip.h"
-#else
 #include "board.h"
-#endif
-#endif
 
 #include <cr_section_macros.h>
 
@@ -37,8 +22,6 @@ static void Delay (uint32_t delay)
 }
 
 int main(void) {
-	uint32_t timerFreq;
-
 	SystemCoreClockUpdate();
 
 	Board_Init();
